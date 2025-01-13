@@ -37,7 +37,7 @@ const postSchema = new Schema(
     },
     tags: {
         type: [String],
-        default: 0,
+        required: false,
       },
     visit: {
       type: Number,
