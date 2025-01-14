@@ -15,7 +15,7 @@ const FeaturedPosts = () => {
           className="rounded-3xl object-cover"
           w="895"
         />} */}
-        <Image src="featured1.jpeg" className="rounded-3xl object-cover" w="895" />
+        <Image src="featured1.jpeg" className="rounded-3xl object-cover" w="895" alt="featured" />
         {/* details */}
         <div className="flex items-center gap-4">
           <h1 className="font-semibold lg:text-lg">01.</h1>
@@ -37,6 +37,11 @@ const FeaturedPosts = () => {
         >
           Post
         </Link>
+        {/* <p>{post.desc}</p> */}
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis dolores obcaecati asperiores laborum ipsa alias atque debitis, quo unde in ratione assumenda quaerat nisi aperiam accusantium? Architecto quasi aperiam fugiat.</p>
+        {/* tags */}
+        <span className="gap-4 text-grey-500 text-sm mt-2"> Tag 1, Tag 2</span>
+        
       </div>
 
       {/* Others */}
@@ -46,10 +51,11 @@ const FeaturedPosts = () => {
           <Image
             src="featured2.jpeg"
             className="rounded-3xl object-cover w-2/5 h-full"
+            alt="featured"
             w="298"
           />
           {/* details and title */}
-          <div className="w-2/3">
+          <div className="flex flex-col w-2/3">
             {/* details */}
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
               <h1 className="font-semibold">02.</h1>
@@ -58,6 +64,8 @@ const FeaturedPosts = () => {
             </div>
             {/* title */}
             <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Link>
+            {/* tags */}
+            <span className="gap-4 text-grey-500 text-sm mt-4"> Tag 1, Tag 2</span>
           </div>
         </div>
         {/* third */}
@@ -66,9 +74,10 @@ const FeaturedPosts = () => {
             src="featured3.jpeg"
             className="rounded-3xl object-cover w-2/5 h-full"
             w="298"
+            alt="featured"
           />
           {/* details and title */}
-          <div className="w-2/3">
+          <div className="flex flex-col w-2/3">
             {/* details */}
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
               <h1 className="font-semibold">03.</h1>
@@ -77,6 +86,8 @@ const FeaturedPosts = () => {
             </div>
             {/* title */}
             <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Link>
+            {/* tags */}
+            <span className="gap-4 text-grey-500 text-sm mt-4"> Tag 1, Tag 2</span>
           </div>
         </div>
         {/* fourth */}
@@ -85,9 +96,10 @@ const FeaturedPosts = () => {
             src="featured4.jpeg"
             className="rounded-3xl object-cover w-2/5 h-full"
             w="298"
+            alt="featured"
           />
           {/* details and title */}
-          <div className="w-2/3">
+          <div className="flex flex-col w-2/3">
             {/* details */}
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
               <h1 className="font-semibold">04.</h1>
@@ -96,6 +108,8 @@ const FeaturedPosts = () => {
             </div>
             {/* title */}
             <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Link>
+            {/* tags */}
+            <span className="gap-4 text-grey-500 text-sm mt-4"> Tag 1, Tag 2</span>
           </div>
         </div>
       </div>

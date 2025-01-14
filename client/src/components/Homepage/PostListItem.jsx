@@ -12,7 +12,7 @@ const PostListItem = () => {
         </div>
       )} */}
          <div className="md:hidden xl:block xl:w-1/3">
-          <Image src="featured2.jpeg" className="rounded-2xl object-cover" w="735" />
+          <Image src="featured2.jpeg" className="rounded-2xl object-cover" w="735" alt="featured" />
         </div>
       {/* details */}
       <div className="flex flex-col gap-4 xl:w-2/3">
@@ -32,6 +32,8 @@ const PostListItem = () => {
           <Link className="text-blue-800">Category</Link>
           <span>Created At</span>
         </div>
+        {/* tags */}
+        <span className="gap-4 text-grey-500 text-sm mt-2"> Tag 1, Tag 2</span>
         {/* <p>{post.desc}</p> */}
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis dolores obcaecati asperiores laborum ipsa alias atque debitis, quo unde in ratione assumenda quaerat nisi aperiam accusantium? Architecto quasi aperiam fugiat.</p>
         {/* <Link to={`/${post.slug}`} className="underline text-blue-800 text-sm"> */}

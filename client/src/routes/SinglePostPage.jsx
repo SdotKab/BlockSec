@@ -36,7 +36,7 @@ const SinglePostPage = () => {
         )} */}
 
           <div className="hidden lg:block w-2/5">
-            <Image src="postImg.jpeg" w="600" className="rounded-2xl" />
+            <Image src="postImg.jpeg" w="600" className="rounded-2xl" alt="postImg" />
           </div>
 
       </div>
@@ -148,6 +148,7 @@ const SinglePostPage = () => {
                   className="w-12 h-12 rounded-full object-cover"
                   w="48"
                   h="48"
+                  alt="userImg"
                 />
 
             <Link className="text-blue-800 text-sm">Username</Link>
@@ -158,10 +159,10 @@ const SinglePostPage = () => {
             </p>
             <div className="flex gap-2">
               <Link>
-                <Image src="facebook.svg" />
+                <Image src="facebook.svg" alt="facebook"/>
               </Link>
               <Link>
-                <Image src="instagram.svg" />
+                <Image src="instagram.svg" alt="instagram" />
               </Link>
             </div>
           </div>

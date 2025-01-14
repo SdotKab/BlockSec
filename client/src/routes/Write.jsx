@@ -3,6 +3,7 @@ import React from 'react'
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill-new";
 import { useAuth, useUser } from "@clerk/clerk-react";
+import DropDownCategories from '../components/DropDownCategories';
 
 const Write = () => {
   // const { isLoaded, isSignedIn } = useUser();
@@ -17,7 +18,7 @@ const Write = () => {
 
   return (
     <div className="h-[calc(100vh-64px)] md:h-[calc(100vh-80px)] flex flex-col gap-6">
-      <h1 className="text-cl font-light">Create a New Post</h1>
+      <h1 className="text-cl font-semibold">Create a New Post</h1>
       {/* <form onSubmit={handleSubmit} className="flex flex-col gap-6 flex-1 mb-6"> */}
       <form onSubmit="" className="flex flex-col gap-6 flex-1 mb-6">
         {/* <Upload type="image" setProgress={setProgress} setData={setCover}>
@@ -25,7 +26,7 @@ const Write = () => {
             Add a cover image
           </button>
         </Upload> */}
-          <button className="w-max p-2 shadow-md rounded-l text-sm text-gray-500 bg-white">
+          <button className="w-max p-2 rounded-md border-2 border-solid text-sm bg-white hover:bg-gray-50">
             Add a cover image
           </button>
         <input
@@ -35,7 +36,7 @@ const Write = () => {
           name="title"
         />
         <div className="flex items-center gap-4">
-          <label htmlFor="" className="text-sm">
+          {/* <label htmlFor="" className="text-sm">
             Choose a category:
           </label>
           <select
@@ -48,8 +49,15 @@ const Write = () => {
             <option value="data">Data</option>
             <option value="aim">AIM</option>
             <option value="governance">Governance</option>
-          </select>
+          </select> */}
+          <DropDownCategories />
         </div>
+        <input
+          className="text-sm p-4 rounded-l bg-white shadow-md"
+          type="text"
+          placeholder="Tags"
+          name="tags"
+        />
         <textarea
           className="p-4 rounded-l bg-white shadow-md text-sm"
           name="desc"
