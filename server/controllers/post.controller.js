@@ -131,28 +131,28 @@ export const createPost = async (req, res) => {
 
 //Delete Post
 export const deletePost = async (req, res) => {
-const clerkUserId = req.auth.userId;
+  const clerkUserId = req.auth.userId;
 
-if (!clerkUserId) {
-  return res.status(401).json("Not authenticated!");
-}
+  if (!clerkUserId) {
+    return res.status(401).json("Not authenticated!");
+  }
 
-const role = req.auth.sessionClaims?.metadata?.role || "user";
+  const role = req.auth.sessionClaims?.metadata?.role || "user";
 
-if (role === "admin") {
-  await Post.findByIdAndDelete(req.params.id);
-  return res.status(200).json("Post has been deleted");
-}
+  if (role === "admin") {
+    await Post.findByIdAndDelete(req.params.id);
+    return res.status(200).json("Post has been deleted");
+  }
 
-const user = await User.findOne({ clerkUserId });
+  const user = await User.findOne({ clerkUserId });
 
-const deletedPost = await Post.findOneAndDelete({
-  _id: req.params.id,
-  user: user._id,
-});
+  const deletedPost = await Post.findOneAndDelete({
+    _id: req.params.id,
+    user: user._id,
+  });
 
-if (!deletedPost) {
-  return res.status(403).json("You can delete only your posts!");
+  if (!deletedPost) {
+    return res.status(403).json("You can delete only your posts!");
 }
 
 res.status(200).json("Post has been deleted");
@@ -192,13 +192,13 @@ export const featurePost = async (req, res) => {
   res.status(200).json(updatedPost);
 };
 
-const imagekit = new ImageKit({
-  urlEndpoint: process.env.IK_URL_ENDPOINT,
-  publicKey: process.env.IK_PUBLIC_KEY,
-  privateKey: process.env.IK_PRIVATE_KEY,
-});
+  const imagekit = new ImageKit({
+    urlEndpoint: process.env.IK_URL_ENDPOINT,
+    publicKey: process.env.IK_PUBLIC_KEY,
+    privateKey: process.env.IK_PRIVATE_KEY,
+  });
 
-export const uploadAuth = async (req, res) => {
-  const result = imagekit.getAuthenticationParameters();
-  res.send(result);
+  export const uploadAuth = async (req, res) => {
+    const result = imagekit.getAuthenticationParameters();
+    res.send(result);
 };
