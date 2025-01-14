@@ -12,7 +12,7 @@ import webhookRouter from "./routes/webhook.route.js";
 
 const app = express();
 
-// app.use(cors(process.env.CLIENT_URL));
+app.use(cors(process.env.CLIENT_URL));
 app.use(clerkMiddleware());
 
 //Webhook, above express.json to prevent collision with body-parser
@@ -20,14 +20,14 @@ app.use("/webhooks", webhookRouter);
 app.use(express.json());
 
 //CORS
-// app.use(function (req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 // ROUTES
 // app.use("/users", userRouter);

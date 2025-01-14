@@ -1,7 +1,28 @@
 import React from 'react'
+import { useSearchParams } from 'react-router-dom';
+
 import Search from '../SinglePost/Search'
 
 const SideMenu = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const handleFilterChange = (e) => {
+    if (searchParams.get("sort") !== e.target.value) {
+      setSearchParams({
+        ...Object.fromEntries(searchParams.entries()),
+        sort: e.target.value,
+      });
+    }
+  };
+  const handleCategoryChange = (category) => {
+    if (searchParams.get("cat") !== category) {
+      setSearchParams({
+        ...Object.fromEntries(searchParams.entries()),
+        cat:category,
+      });
+    }
+  };
+
   return (
     <div className="px-4 h-max sticky top-8">
       <h1 className="mb-4 text-sm font-medium">Search</h1>
@@ -12,7 +33,7 @@ const SideMenu = () => {
           <input
             type="radio"
             name="sort"
-            // onChange={handleFilterChange}
+            onChange={handleFilterChange}
             value="newest"
             className="appearance-none w-4 h-4 border-[1.5px] border-blue-800 cursor-pointer rounded-sm bg-white checked:bg-blue-800"
           />
@@ -22,7 +43,7 @@ const SideMenu = () => {
           <input
             type="radio"
             name="sort"
-            // onChange={handleFilterChange}
+            onChange={handleFilterChange}
             value="popular"
             className="appearance-none w-4 h-4 border-[1.5px] border-blue-800 cursor-pointer rounded-sm bg-white checked:bg-blue-800"
           />
@@ -32,7 +53,7 @@ const SideMenu = () => {
           <input
             type="radio"
             name="sort"
-            // onChange={handleFilterChange}
+            onChange={handleFilterChange}
             value="trending"
             className="appearance-none w-4 h-4 border-[1.5px] border-blue-800 cursor-pointer rounded-sm bg-white checked:bg-blue-800"
           />
@@ -42,7 +63,7 @@ const SideMenu = () => {
           <input
             type="radio"
             name="sort"
-            // onChange={handleFilterChange}
+            onChange={handleFilterChange}
             value="oldest"
             className="appearance-none w-4 h-4 border-[1.5px] border-blue-800 cursor-pointer rounded-sm bg-white checked:bg-blue-800"
           />
@@ -51,18 +72,12 @@ const SideMenu = () => {
       </div>
       <h1 className="mt-8 mb-4 text-sm font-medium">Categories</h1>
       <div className="flex flex-col gap-2 text-sm">
-        {/* <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("all")}>All</span>
+        <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("all")}>All</span>
         <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("infrastructure")}>Infrastructure</span>
         <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("data")}>Data</span>
         <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("iam")}>IAM</span>
         <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("application")}>Application</span>
-        <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("governance")}>Governance</span> */}
-        <span className="underline cursor-pointer">All</span>
-        <span className="underline cursor-pointer">Infrastructure</span>
-        <span className="underline cursor-pointer">Data</span>
-        <span className="underline cursor-pointer">IAM</span>
-        <span className="underline cursor-pointer">Application</span>
-        <span className="underline cursor-pointer">Governance</span>
+        <span className="underline cursor-pointer" onClick={()=>handleCategoryChange("governance")}>Governance</span>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Search from '../SinglePost/Search'
 
 const MainCategories = () => {
   return (
@@ -45,7 +46,7 @@ const MainCategories = () => {
       </div>
       <span className="text-xl font-medium">|</span>
       {/* search */}
-      {/* <Search /> */}
+      <Search />
     </div>
   )
 }
