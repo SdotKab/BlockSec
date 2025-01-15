@@ -1,5 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { format } from "timeago.js";
+
+import { fetchOnePost } from '../utils/fetch.js'
 import SideCategories from '../components/SinglePost/SideCategories'
 import PostMenuActions from '../components/SinglePost/PostMenuActions'
 import Image from '../components/Image'
@@ -7,6 +11,18 @@ import Search from '../components/SinglePost/Search'
 import Comments from '../components/Comments/Comments'
 
 const SinglePostPage = () => {
+  const { slug } = useParams();
+
+  const { isPending, error, data } = useQuery({
+    queryKey: ["post", slug],
+    queryFn: () => fetchOnePost(slug),
+  });
+
+  console.log(data)
+  if (isPending) return "loading...";
+  if (error) return "Something went wrong!" + error.message;
+  if (!data) return "Post not found!";
+
   return (
     <div className="flex flex-col gap-8">
       {/* detail */}
