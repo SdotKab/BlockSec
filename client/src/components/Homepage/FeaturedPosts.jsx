@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { format } from "timeago.js";
 
-import { fetchFeaturedPost } from '/src/utils/fetch.js'
+import { fetchFeaturedPosts } from '/src/utils/fetch.js'
 import Image from '../Image'
 
 // const fetchPost = async () => {
@@ -17,7 +17,7 @@ import Image from '../Image'
 const FeaturedPosts = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ["featuredPosts"],
-    queryFn: () => fetchFeaturedPost(),
+    queryFn: () => fetchFeaturedPosts(),
   });
 
   if (isPending) return "loading...";
