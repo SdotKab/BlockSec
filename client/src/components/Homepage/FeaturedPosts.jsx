@@ -4,19 +4,20 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { format } from "timeago.js";
 
+import { fetchFeaturedPost } from '/src/utils/fetch.js'
 import Image from '../Image'
 
-const fetchPost = async () => {
-  const res = await axios.get(
-    `${import.meta.env.VITE_API_URL}/posts?featured=true&limit=4&sort=newest`
-  );
-  return res.data;
-};
+// const fetchPost = async () => {
+//   const res = await axios.get(
+//     `${import.meta.env.VITE_API_URL}/posts?featured=true&limit=4&sort=newest`
+//   );
+//   return res.data;
+// };
 
 const FeaturedPosts = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ["featuredPosts"],
-    queryFn: () => fetchPost(),
+    queryFn: () => fetchFeaturedPost(),
   });
 
   if (isPending) return "loading...";
