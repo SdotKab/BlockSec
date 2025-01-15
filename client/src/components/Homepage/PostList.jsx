@@ -5,15 +5,16 @@ import axios from "axios";
 import { useSearchParams } from 'react-router-dom';
 
 import PostListItem from './PostListItem';
+import { fetchPostList } from '../../utils/fetch';
 
-const fetchPosts = async (pageParam, searchParams) => {
-  const searchParamsObj = Object.fromEntries([...searchParams]);
+// const fetchPosts = async (pageParam, searchParams) => {
+//   const searchParamsObj = Object.fromEntries([...searchParams]);
 
-  const res = await axios.get(`${import.meta.env.VITE_API_URL}/posts`, {
-    params: { page: pageParam, limit: 10, ...searchParamsObj },
-  });
-  return res.data;
-};
+//   const res = await axios.get(`${import.meta.env.VITE_API_URL}/posts`, {
+//     params: { page: pageParam, limit: 10, ...searchParamsObj },
+//   });
+//   return res.data;
+// };
 
 const PostList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,16 +29,34 @@ const PostList = () => {
     status,
   } = useInfiniteQuery({
     queryKey: ["posts", searchParams.toString()],
-    queryFn: ({ pageParam = 1 }) => fetchPosts(pageParam, searchParams),
+    queryFn: ({ pageParam = 1 }) => fetchPostList(pageParam, searchParams),
     initialPageParam: 1,
     getNextPageParam: (lastPage, pages) =>
       lastPage.hasMore ? pages.length + 1 : undefined,
   });
 
+  // // console.log(searchParams.toString())
+  // const category = searchParams.toString()
+
+  // function splitCatString(category) {
+  //   // Split the string at the equals sign (=)
+  //   const [key, value] = category.split('=');
+  //   const objectCategory = { key, value }
+  //   // console.log(objectCategory)
+  //   return objectCategory;
+  // }
+
+  
+  // // Example usage
+  // // const input = "cat=Infrastructure";
+  // const result = splitCatString(category);
+  
+  // // sendCategory(result)
+  // // console.log(result); 
+  
   // if (status === "loading") return "Loading...";
   if (isFetching) return "Loading...";
   
-
   // if (status === "error") return "Something went wrong!";
   if (error) return "Something went wrong!";
 

@@ -14,31 +14,31 @@ const MainCategories = () => {
           All Posts
         </Link>
         <Link
-          to="/posts?cat=infrastructure"
+          to="/posts?cat=Infrastructure"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           Infrastructure
         </Link>
         <Link
-          to="/posts?cat=data"
+          to="/posts?cat=Data"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           Data
         </Link>
         <Link
-          to="/posts?cat=application"
+          to="/posts?cat=Application"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           Application
         </Link>
         <Link
-          to="/posts?cat=iam"
+          to="/posts?cat=IAM"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           IAM
         </Link>
         <Link
-          to="/posts?cat=governance"
+          to="/posts?cat=Governance"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           Governance

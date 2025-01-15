@@ -13,3 +13,13 @@ export async function fetchFeaturedPosts() {
     );
     return res.data;
   };
+
+//Fetch Post List Posts
+export async function fetchPostList(pageParam, searchParams) {
+  const searchParamsObj = Object.fromEntries([...searchParams]);
+
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/posts`, {
+    params: { page: pageParam, limit: 10, ...searchParamsObj },
+  });
+  return res.data;
+}; 

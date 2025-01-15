@@ -104,11 +104,11 @@ const Write = () => {
             id=""
             className="p-2 rounded-l bg-white shadow-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
           >
-            <option value="infrastructure" className="bg-white">Infrastructure</option>
-            <option value="application" className="bg-white">Application</option>
-            <option value="data" className="bg-white"> Data</option>
-            <option value="aim" className="bg-white">AIM</option>
-            <option value="governance" className="bg-white">Governance</option>
+            <option value="Infrastructure" className="bg-white">Infrastructure</option>
+            <option value="Application" className="bg-white">Application</option>
+            <option value="Data" className="bg-white"> Data</option>
+            <option value="IAM" className="bg-white">IAM</option>
+            <option value="Governance" className="bg-white">Governance</option>
           </select>
           {/* <DropDownCategories /> */}
           {/* <DropDownCat name="category" onCategoryChange={handleCategoryChange} /> */}

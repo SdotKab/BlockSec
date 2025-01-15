@@ -14,8 +14,8 @@ const PostListItem = ({post}) => {
         </div>
       )}
       {/* details */}
-      <div className="flex flex-col gap-4 xl:w-2/3">
-        <Link to={`/${post.slug}`} className="text-4xl font-semibold">
+      <div className="flex flex-col gap-2 xl:w-2/3">
+        <Link to={`/${post.slug}`} className="text-2xl font-semibold">
           {post.title}
         </Link>
         <div className="flex items-center gap-2 text-gray-400 text-sm">
@@ -24,16 +24,16 @@ const PostListItem = ({post}) => {
           <Link className="text-blue-800" to="/username">Username</Link>
           <span>on</span>
           <Link className="text-blue-800">{post.category}</Link>
-          <span>{format(post.createdAt)}</span>
         </div>
+        <span className="text-xs">{format(post.createdAt)}</span>
         {/* tags */}
-        <span className="flex flex-row space-around gap-1 text-grey-500 text-sm mt-2"> 
+
+        <p className="mt-2">{post.desc}</p>
+        <span className="flex flex-row space-around gap-1 text-grey-500 text-xs mt-2"> 
           {post.tags.map((tag, index) => (
             <span className="bg-gray-400 hover:bg-gray-500 text-white py-0.5 px-1 rounded-full text-sm" key={index}>{tag}</span> 
           ))}
         </span>
-
-        <p>{post.desc}</p>
         <Link to={`/${post.slug}`} className="underline text-blue-800 text-sm">
           Read More
         </Link>
