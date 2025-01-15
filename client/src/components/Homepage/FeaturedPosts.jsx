@@ -23,7 +23,6 @@ const FeaturedPosts = () => {
   if (error) return "Something went wrong!" + error.message;
 
   const posts = data.posts;
-  console.log(posts)
   if (!posts || posts.length === 0) {
     return;
   }
