@@ -66,7 +66,7 @@ const Write = () => {
       img: cover.filePath || "",
       title: formData.get("title"),
       category: formData.get("category"),
-      tags: formData.get("tags"),
+      tags: formData.get("tags").split(",").map(tag => tag.trim()),
       desc: formData.get("desc"),
       content: value,
     };
