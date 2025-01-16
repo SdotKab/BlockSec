@@ -8,8 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import { toast } from "react-toastify";
 
-import DropDownCategories from '../components/DropDownCategories';
-import DropDownCat from '../components/DropDownCat';
+import Upload from '../components/Upload';
 
 const Write = () => {
   const { isLoaded, isSignedIn } = useUser();
@@ -78,31 +77,28 @@ const Write = () => {
 
   return (
     <div className="h-[calc(100vh-64px)] md:h-[calc(100vh-80px)] flex flex-col gap-6">
-      <h1 className="text-cl font-semibold">Create a New Post</h1>
+      <h1 className="text-xl font-semibold">Create a New Post</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-6 flex-1 mb-6">
-      {/* <form onSubmit="" className="flex flex-col gap-6 flex-1 mb-6"> */}
-        {/* <Upload type="image" setProgress={setProgress} setData={setCover}>
-          <button className="w-max p-2 shadow-md rounded-xl text-sm text-gray-500 bg-white">
+        <Upload type="image" setProgress={setProgress} setData={setCover}>
+          {/* <button className="w-max p-2 shadow-md rounded-xl text-sm text-gray-500 bg-white border"> */}
+          <button className="bg-transparent hover:bg-gray-300 text-black text-sm font-semibold mt-4 p-2 w-36 border border-gray-600 rounded-full">
             Add a cover image
           </button>
-        </Upload> */}
-          <button className="w-max p-2 rounded-md border-2 border-solid text-sm bg-white hover:bg-gray-50">
-            Add a cover image
-          </button>
+        </Upload>
         <input
-          className="text-xl p-4 rounded-l bg-white shadow-md"
+          className="text-2xl bg-white text-black font-semibold mt-4 p-4 border border-gray-600 rounded-lg w-4/5"
           type="text"
           placeholder="Title"
           name="title"
         />
         <div className="flex items-center gap-4">
-          <label htmlFor="" className="text-sm">
+          <label htmlFor="" className="text-md">
             Choose a category:
           </label>
           <select
             name="category"
             id=""
-            className="p-2 rounded-l bg-white shadow-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
+            className="p-2 bg-white text-black font-semibold mt-1 p-3 border border-gray-600 rounded-lg appearance-none"
           >
             <option value="Infrastructure" className="bg-white">Infrastructure</option>
             <option value="Application" className="bg-white">Application</option>
@@ -110,51 +106,43 @@ const Write = () => {
             <option value="IAM" className="bg-white">IAM</option>
             <option value="Governance" className="bg-white">Governance</option>
           </select>
-          {/* <DropDownCategories /> */}
-          {/* <DropDownCat name="category" onCategoryChange={handleCategoryChange} /> */}
 
         </div>
         <input
-          className="text-sm p-4 rounded-l bg-white shadow-md"
+          className="text-sm bg-white text-black font-semibold mt-4 p-4 border border-gray-600 rounded-lg w-3/5"
           type="text"
           placeholder="Tags"
           name="tags"
         />
         <textarea
-          className="p-4 rounded-l bg-white shadow-md text-sm"
+          className="bg-white text-black font-semibold mt-4 p-4 border border-gray-600 rounded-lg w-4/5"
           name="desc"
           placeholder="A Short Description"
         />
+        <div className="flex flex-row gap-4 ml-3">
+          <Upload type="image" setProgress={setProgress} setData={setImg}>
+            🌆
+          </Upload>
+          <Upload type="video" setProgress={setProgress} setData={setVideo}>
+            ▶️
+          </Upload>
+        </div>
         <div className="flex flex-1 ">
-          <div className="flex flex-col gap-2">
-            {/* <Upload type="image" setProgress={setProgress} setData={setImg}>
-              🌆
-            </Upload>
-            <Upload type="video" setProgress={setProgress} setData={setVideo}>
-              ▶️
-            </Upload> */}
-          </div>
           <ReactQuill
             theme="snow"
-            className="flex-1 rounded-l bg-white shadow-md"
+            className="flex-1 bg-white text-black font-semibold p-4 border border-gray-600 rounded-lg h-52"
             value={value}
             onChange={setValue}
             readOnly={0 < progress && progress < 100}
           />
         </div>
-        {/* <button
-          disabled={mutation.isPending || (0 < progress && progress < 100)}
-          className="bg-blue-800 text-white font-medium rounded-xl mt-4 p-2 w-36 disabled:bg-blue-400 disabled:cursor-not-allowed"
-        >
-          {mutation.isPending ? "Loading..." : "Publish"}
-        </button> */}
         <button
           disabled={mutation.isPending || (0 < progress && progress < 100)}
           className="bg-transparent hover:bg-black text-black font-semibold hover:text-white mt-4 p-2 w-36 border border-gray-600 hover:border-transparent rounded-full disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {mutation.isPending ? "Loading..." : "Publish"}
         </button>
-        {"Progress:" + progress}
+        {/* {"Progress:" + progress} */}
         {mutation.isError && <span>{mutation.error.message}</span>}
       </form>
     </div>
