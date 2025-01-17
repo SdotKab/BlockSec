@@ -64,7 +64,7 @@ const Write = () => {
     const formData = new FormData(e.target);
 
     const data = {
-      img: cover.filePath || "",
+      img: cover.filePath || null,
       title: formData.get("title"),
       category: formData.get("category"),
       tags: formData.get("tags").split(",").map(tag => tag.trim()),
@@ -141,7 +141,7 @@ const Write = () => {
         >
           {mutation.isPending ? "Loading..." : "Publish"}
         </button>
-        {/* {"Progress:" + progress} */}
+        {"Progress:" + progress}
         {mutation.isError && <span>{mutation.error.message}</span>}
       </form>
     </div>
