@@ -24,6 +24,7 @@ const SinglePostPage = () => {
   if (!data) return "Post not found!";
 
   console.log(data.img)
+  console.log(data.content)
 
   return (
     <div className="flex flex-col gap-8">

@@ -119,10 +119,10 @@ const Write = () => {
           placeholder="A Short Description"
         />
         <div className="flex flex-row gap-4 ml-3">
-          {/* <Upload type="image" setProgress={setProgress} setData={setImg}>
+          <Upload type="image" setProgress={setProgress} setData={setImg}>
             🌆
           </Upload>
-          <Upload type="video" setProgress={setProgress} setData={setVideo}>
+          {/* <Upload type="video" setProgress={setProgress} setData={setVideo}>
             ▶️
           </Upload> */}
         </div>
