@@ -30,14 +30,14 @@ const SinglePostPage = () => {
       {/* detail */}
       {/* Cover Image */}
       <div className="flex flex-col gap-4">
-        {/* {data.img && (
-          <div className="hidden lg:block w-2/5">
+        {data.img && (
+          <div className="flex justify-center items-center hidden md:block w-4/5">
             <Image src={data.img} w="600" className="rounded-2xl" />
           </div>
-        )} */}
-        <div className="flex justify-center items-center hidden md:block w-4/5">
+        )}
+        {/* <div className="flex justify-center items-center hidden md:block w-4/5">
           <Image src="postImg.jpeg" w="600" className="rounded-2xl" alt="postImg" />
-        </div>
+        </div> */}
         {/* Title and details */}
         <div className="lg:w-2/5 flex flex-col gap-8">
           <h1 className="text-xl md:text-3xl xl:text-4xl 2xl:text-5xl font-semibold mt-2">

@@ -18,6 +18,8 @@ const Write = () => {
   const [video, setVideo] = useState("");
   const [progress, setProgress] = useState(0);
 
+  console.log(isLoaded)
+
 
   useEffect(() => {
     img && setValue((prev) => prev + `<p><image src="${img.url}"/></p>`);
@@ -70,8 +72,6 @@ const Write = () => {
       content: value,
     };
 
-    console.log(data);
-
     mutation.mutate(data);
   };
 
@@ -80,7 +80,6 @@ const Write = () => {
       <h1 className="text-xl font-semibold">Create a New Post</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-6 flex-1 mb-6">
         <Upload type="image" setProgress={setProgress} setData={setCover}>
-          {/* <button className="w-max p-2 shadow-md rounded-xl text-sm text-gray-500 bg-white border"> */}
           <button className="bg-transparent hover:bg-gray-300 text-black text-sm font-semibold mt-4 p-2 w-36 border border-gray-600 rounded-full">
             Add a cover image
           </button>
@@ -120,17 +119,17 @@ const Write = () => {
           placeholder="A Short Description"
         />
         <div className="flex flex-row gap-4 ml-3">
-          <Upload type="image" setProgress={setProgress} setData={setImg}>
+          {/* <Upload type="image" setProgress={setProgress} setData={setImg}>
             🌆
           </Upload>
           <Upload type="video" setProgress={setProgress} setData={setVideo}>
             ▶️
-          </Upload>
+          </Upload> */}
         </div>
         <div className="flex flex-1 ">
           <ReactQuill
             theme="snow"
-            className="flex-1 bg-white text-black font-semibold p-4 border border-gray-600 rounded-lg h-52"
+            className="flex-1 bg-white text-black font-semibold p-4 border border-gray-600 rounded-lg h-fit"
             value={value}
             onChange={setValue}
             readOnly={0 < progress && progress < 100}

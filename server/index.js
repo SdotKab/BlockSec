@@ -46,7 +46,6 @@ app.use((error, req, res, next) => {
 });
 
 
-
 app.listen(8080, () => {
   connectDB();
   console.log("Server is running!");

@@ -92,13 +92,9 @@ export const getPost = async (req, res) => {
   res.status(200).json(post);
 };
 
-  
-  
 //Create Post
 export const createPost = async (req, res) => {
   const clerkUserId = req.auth.userId;
-  
-  // console.log(req.headers);
   
   if (!clerkUserId) {
     return res.status(401).json("Not authenticated!");
@@ -193,13 +189,15 @@ export const featurePost = async (req, res) => {
   res.status(200).json(updatedPost);
 };
 
-  const imagekit = new ImageKit({
-    urlEndpoint: process.env.IK_URL_ENDPOINT,
-    publicKey: process.env.IK_PUBLIC_KEY,
-    privateKey: process.env.IK_PRIVATE_KEY,
-  });
+//Process Imagekit - Authenticate with keys
+const imagekit = new ImageKit({
+  urlEndpoint: process.env.IK_URL_ENDPOINT,
+  publicKey: process.env.IK_PUBLIC_KEY,
+  privateKey: process.env.IK_PRIVATE_KEY,
+});
 
-  export const uploadAuth = async (req, res) => {
-    const result = imagekit.getAuthenticationParameters();
-    res.send(result);
+//Upload files (video and picture)
+export const uploadAuth = async (req, res) => {
+  const result = imagekit.getAuthenticationParameters();
+  res.send(result);
 };

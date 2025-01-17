@@ -35,8 +35,10 @@ const Upload = ({ children, type, setProgress, setData }) => {
     setData(res);
   };
   const onUploadProgress = (progress) => {
-    console.log(progress);
-    setProgress(Math.round((progress.loaded / progress.total) * 100));
+    //   setProgress(Math.round((progress.loaded / progress.total) * 100));
+    const newProgress = Math.round((progress.loaded / progress.total) * 100)
+    setProgress(newProgress)
+      console.log(newProgress);
   };
 
   return (
