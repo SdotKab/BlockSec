@@ -122,9 +122,9 @@ const Write = () => {
           <Upload type="image" setProgress={setProgress} setData={setImg}>
             🌆
           </Upload>
-          {/* <Upload type="video" setProgress={setProgress} setData={setVideo}>
+          <Upload type="video" setProgress={setProgress} setData={setVideo}>
             ▶️
-          </Upload> */}
+          </Upload>
         </div>
         <div className="flex flex-1 ">
           <ReactQuill

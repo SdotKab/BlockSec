@@ -63,7 +63,7 @@ const Homepage = () => {
               <line x1="6" y1="18" x2="18" y2="6" />
               <polyline points="9 6 18 6 18 15" />
             </svg> */}
-            <Image src="icons8-blockoff.png" alt="Write" w={50} h={50} />
+            <Image src="icons8-blockchain-64.png" alt="Write" w={50} h={50} />
           </button>
         </Link>
       </div>
