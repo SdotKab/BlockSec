@@ -23,8 +23,7 @@ const SinglePostPage = () => {
   if (error) return "Something went wrong!" + error.message;
   if (!data) return "Post not found!";
 
-  console.log(data.img)
-  console.log(data.content)
+
 
   return (
     <div className="flex flex-col gap-8">
@@ -43,8 +42,8 @@ const SinglePostPage = () => {
           </h1>
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <span>Written by</span>
-            {/* <Link className="text-blue-800">{data.user.username}</Link> */}
-            <Link className="text-blue-800">username</Link>
+            <Link className="text-blue-800">{data.user.username}</Link>
+            {/* <Link className="text-blue-800">username</Link> */}
             <span>on</span>
             <Link className="text-blue-800">{data.category}</Link>
             <span>{format(data.createdAt)}</span>
@@ -71,24 +70,31 @@ const SinglePostPage = () => {
             <div className="flex items-center gap-8">
               {/* {data.user.img && (
                 <Image
-                  src={data.user.img}
+                  src={data.user.img || data.noProfilePic }
                   className="w-12 h-12 rounded-full object-cover"
                   w="48"
                   h="48"
                   alt="userImg"
                 />
               )} */}
-
                 <Image
+                  src="noProfilePic.jpeg"
+                  className="w-12 h-12 rounded-full object-cover"
+                  w="48"
+                  h="48"
+                  alt="noProfilePic"
+                />
+
+
+                {/* <Image
                   src="userImg.jpeg"
                   className="w-12 h-12 rounded-full object-cover"
                   w="48"
                   h="48"
                   alt="userImg"
-                />
-
-            <Link className="text-blue-800 text-sm">Username</Link>
-            {/* <Link className="text-blue-800">{data.user.username}</Link> */}
+                /> */}
+            {/* <Link className="text-blue-800 text-sm">Username</Link> */}
+            <Link className="text-blue-800">{data.user.username}</Link>
             </div>
             <p className="text-sm text-gray-500">
               Lorem ipsum dolor sit amet consectetur

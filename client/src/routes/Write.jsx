@@ -18,8 +18,6 @@ const Write = () => {
   const [video, setVideo] = useState("");
   const [progress, setProgress] = useState(0);
 
-  console.log(isLoaded)
-
 
   useEffect(() => {
     img && setValue((prev) => prev + `<p><image src="${img.url}"/></p>`);
@@ -142,7 +140,7 @@ const Write = () => {
           {mutation.isPending ? "Loading..." : "Publish"}
         </button>
         {"Progress:" + progress}
-        {mutation.isError && <span>{mutation.error.message}</span>}
+        {/* {mutation.isError && <span>{mutation.error.message}</span>} */}
       </form>
     </div>
   )
