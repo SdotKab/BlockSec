@@ -36,8 +36,7 @@ const FeaturedPosts = () => {
         {/* details */}
         <div className="flex items-center gap-4">
           <h1 className="font-semibold lg:text-lg">01.</h1>
-          <Link className="text-blue-800 lg:text-lg">{posts[0].category}</Link>
-          <span className="text-gray-500">{format(posts[0].createdAt)}</span>
+          <Link to={`/posts?cat=${posts[0].category}`} className="text-blue-800 lg:text-lg">{posts[0].category}</Link>
         </div>
         {/* title */}
         <Link
@@ -46,6 +45,11 @@ const FeaturedPosts = () => {
         >
           {posts[0].title}
         </Link>
+        <div className="flex items-center gap-2 text-gray-400 text-sm">
+          <span>Written by</span>
+          <Link className="text-blue-800" to={`/posts?author=${posts[0].user.username}`}>{posts[0].user.username}</Link>
+          <span className="text-gray-500">{format(posts[0].createdAt)}</span>
+        </div>
         <p>{posts[0].desc}</p>
         <span className="flex flex-row space-around gap-1 text-grey-500 text-sm mt-2"> 
           {posts[0].tags.map((tag, index) => (
@@ -71,11 +75,15 @@ const FeaturedPosts = () => {
             {/* details */}
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
               <h1 className="font-semibold">02.</h1>
-              <Link to="/infrastructure" className="text-grey-800">{posts[1].category}</Link>
-              <span className="text-grey-500 text-sm"> {format(posts[1].createdAt)}</span>
+              <Link to= {`/posts?cat=${posts[1].category}`} className="text-grey-800">{posts[1].category}</Link>
             </div>
             {/* title */}
             <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[1].title}</Link>
+            <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
+              <span>Written by</span>
+              <Link className="text-blue-800" to={`/posts?author=${posts[1].user.username}`}>{posts[1].user.username}</Link>
+              <span className="text-gray-500">{format(posts[1].createdAt)}</span>
+            </div>
             {/* desc */}
             <ShortDesc text={posts[1].desc} />
             {/* tags */}
@@ -101,11 +109,15 @@ const FeaturedPosts = () => {
             {/* details */}
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
               <h1 className="font-semibold">03.</h1>
-              <Link to="/infrastructure" className="text-grey-800">{posts[2].category}</Link>
-              <span className="text-grey-500 text-sm"> {format(posts[2].createdAt)}</span>
+              <Link to= {`/posts?cat=${posts[2].category}`} className="text-grey-800">{posts[2].category}</Link>
             </div>
-            {/* title */}
+            {/* title and details */}
             <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[2].title}</Link>
+            <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
+              <span>Written by</span>
+              <Link className="text-blue-800" to={`/posts?author=${posts[2].user.username}`}>{posts[2].user.username}</Link>
+              <span className="text-gray-500">{format(posts[2].createdAt)}</span>
+            </div>
             {/* desc */}
             <ShortDesc text={posts[2].desc} />
             {/* tags */}
@@ -131,11 +143,15 @@ const FeaturedPosts = () => {
             {/* details */}
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
               <h1 className="font-semibold">04.</h1>
-              <Link to="/infrastructure" className="text-grey-800">{posts[3].category}</Link>
-              <span className="text-grey-500 text-sm"> {format(posts[3].createdAt)}</span>
+              <Link to={`/posts?cat=${posts[3].category}`} className="text-grey-800">{posts[3].category}</Link>
             </div>
-            {/* title */}
+            {/* title and details */}
             <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[3].title}</Link>
+            <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
+              <span>Written by</span>
+              <Link className="text-blue-800" to={`/posts?author=${posts[3].user.username}`}>{posts[3].user.username}</Link>
+              <span className="text-gray-500">{format(posts[3].createdAt)}</span>
+            </div>
             {/* desc */}
             <ShortDesc text={posts[3].desc} />
             {/* tags */}
