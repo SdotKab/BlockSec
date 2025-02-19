@@ -43,12 +43,10 @@ const SinglePostPage = () => {
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <span>Written by</span>
             <Link className="text-blue-800">{data.user.username}</Link>
-            {/* <Link className="text-blue-800">username</Link> */}
             <span>on</span>
             <Link className="text-blue-800">{data.category}</Link>
             <span>{format(data.createdAt)}</span>
           </div>
-          {/* <p className="text-gray-500 font-medium">{data.desc}</p> */}
         </div>
 
       </div>
@@ -109,7 +107,7 @@ const SinglePostPage = () => {
             </div>
           </div>
           {/* <PostMenuActions post={data} /> */}
-          <PostMenuActions />
+          <PostMenuActions post={data} />
           <SideCategories />
           <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
           <Search />
