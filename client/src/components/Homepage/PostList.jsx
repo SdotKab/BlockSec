@@ -30,6 +30,7 @@ const PostList = () => {
   
   if (error) return "Something went wrong!";
 
+  // flatMap to combine arrays
   const allPosts = data?.pages?.flatMap((page) => page.posts) || [];
 
   return (

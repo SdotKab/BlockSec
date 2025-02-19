@@ -22,4 +22,11 @@ export async function fetchPostList(pageParam, searchParams) {
     params: { page: pageParam, limit: 10, ...searchParamsObj },
   });
   return res.data;
-}; 
+};
+
+//Fetch Comments
+export async function fetchComments(postId) {
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/comments/${postId}`
+  );
+  return res.data;
+};
