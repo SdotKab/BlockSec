@@ -51,25 +51,23 @@ const Comment = ({ comment, postId }) => {
             alt="user"
           /> */}
         <span className="font-medium">{comment.user.username}</span>
-        {/* <span className="font-medium">username</span> */}
         <span className="text-sm text-gray-500">
           {format(comment.createdAt)}
           {/* Created at */}
         </span>
-        {/* {user &&
+        {user &&
           (comment.user.username === user.username || role === "admin") && (
             <span
               className="text-xs text-red-300 hover:text-red-500 cursor-pointer"
               onClick={() => mutation.mutate()}
             >
-              delete
+              Delete
               {mutation.isPending && <span>(in progress)</span>}
             </span>
-          )} */}
+          )}
       </div>
       <div className="mt-4">
         <p>{comment.desc}</p>
-        {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ducimus doloribus omnis repellendus nesciunt necessitatibus sint, nam maxime sapiente quis accusamus dolores saepe aperiam minus in tempore. Libero, molestias! Quos?</p> */}
       </div>
     </div>
   )

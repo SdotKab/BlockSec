@@ -11,6 +11,9 @@ import { toast } from "react-toastify";
 import Upload from '../components/Upload';
 
 const Write = () => {
+  const { user } = useUser();
+  const isAdmin = user?.publicMetadata?.role === "admin" || false;
+
   const { isLoaded, isSignedIn } = useUser();
   const [value, setValue] = useState("");
   const [cover, setCover] = useState("");
@@ -74,6 +77,9 @@ const Write = () => {
   };
 
   return (
+    <> 
+    {isAdmin ? (
+
     <div className="h-[calc(100vh-64px)] md:h-[calc(100vh-80px)] flex flex-col gap-6">
       <h1 className="text-xl font-semibold">Create a New Post</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-6 flex-1 mb-6">
@@ -143,6 +149,9 @@ const Write = () => {
         {/* {mutation.isError && <span>{mutation.error.message}</span>} */}
       </form>
     </div>
+      
+    ): <p>You do not have access to this page.</p> }
+  </>
   )
 }
 

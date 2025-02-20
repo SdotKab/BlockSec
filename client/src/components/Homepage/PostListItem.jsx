@@ -22,7 +22,7 @@ const PostListItem = ({post}) => {
           <span>Written by</span>
           <Link className="text-blue-800" to={`/posts?author=${post.user.username}`}>{post.user.username}</Link>
           <span>on</span>
-          <Link className="text-blue-800">{post.category}</Link>
+          <Link className="text-blue-800" to={`/posts?cat=${post.category}`}>{post.category}</Link>
         </div>
         <span className="text-xs">{format(post.createdAt)}</span>
         {/* tags */}

@@ -4,9 +4,14 @@ import Image from '../components/Image';
 import MainCategories from '../components/Homepage/MainCategories';
 import FeaturedPosts from '../components/Homepage/FeaturedPosts';
 import PostList from '../components/Homepage/PostList';
+import { useAuth, useUser } from '@clerk/clerk-react';
 
 
 const Homepage = () => {
+  const { user } = useUser();
+  const { getToken } = useAuth();
+  const isAdmin = user?.publicMetadata?.role === "admin" || false;
+
   return (
     <div className="mt-4 flex flex-col gap-4">
       {/* BREADCRUMB */}
@@ -27,6 +32,7 @@ const Homepage = () => {
           </p>
         </div>
         {/* animated button */}
+        {isAdmin ? (
         <Link to="write" className="hidden md:block relative">
           <svg
             viewBox="0 0 200 200"
@@ -66,6 +72,7 @@ const Homepage = () => {
             <Image src="icons8-blockchain-64.png" alt="Write" w={50} h={50} />
           </button>
         </Link>
+        ): <></> }
       </div>
       {/* CATEGORIES */}
       <MainCategories />

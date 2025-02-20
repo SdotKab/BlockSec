@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ClerkProvider } from '@clerk/clerk-react'
+import { ClerkProvider, useAuth, useUser } from '@clerk/clerk-react'
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,6 +25,7 @@ if (!PUBLISHABLE_KEY) {
 }
 
 const router = createBrowserRouter([
+  
   {
     element: <MainLayout />,
     children: [
