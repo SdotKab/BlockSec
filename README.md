@@ -2,7 +2,7 @@
 
 Welcome to my BlockSec Blog App repository! This app is built using a modern tech stack, including React 19, Next.js, MongoDB, Clerk Auth, Express.js, and Node.js. It allows users to create, read, update, and delete blog posts with a clean and user-friendly interface, all while keeping authentication and data management secure and scalable.
 
-##Features
+## Features:
 Authentication: Secure login and signup with Clerk for handling user authentication.
 
 Blog CRUD Operations: Users can create, read, update, and delete their blog posts.
@@ -12,7 +12,8 @@ Responsive Design: Built to be mobile-friendly and responsive across various scr
 API Integration: Uses Express.js to handle API requests and MongoDB for storing blog data.
 
 Full Stack Application: Uses Next.js for server-side rendering and React for the front-end.
-Tech Stack
+
+## Tech Stack:
 React 19: Used for building interactive UIs and handling user state.
 
 Next.js: Used for server-side rendering, API routes, and static site generation.
@@ -24,10 +25,8 @@ Clerk Auth: Provides secure authentication and session management for users.
 Express.js: Backend framework for building API routes and handling business logic.
 
 Node.js: JavaScript runtime used for executing the backend code.
-Frontend Package List
-Here’s a list of the frontend packages used in the project:
 
-json
+### Frontend Package List:
 "@clerk/clerk-react": "^5.21.0",
 "@headlessui/react": "^2.2.0",
 "@heroicons/react": "^2.2.0",
@@ -43,11 +42,8 @@ json
 "react-router-dom": "^7.1.1",
 "react-toastify": "^10.0.6",
 "timeago.js": "^4.0.2"
-Backend Package List
-Here’s a list of the backend packages used in the project:
 
-json
-Copy
+### Backend Package List:
 "@clerk/express": "^1.3.10",
 "body-parser": "^2.0.1",
 "cors": "^2.8.5",
