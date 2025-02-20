@@ -12,7 +12,6 @@ export const getPosts = async (req, res) => {
   //Search Query 
   const query = {};
 
-  // console.log(req.query);
 
   //Search type
   const cat = req.query.cat;
@@ -21,14 +20,17 @@ export const getPosts = async (req, res) => {
   const sortQuery = req.query.sort;
   const featured = req.query.featured;
 
+  //Query category
   if (cat) {
     query.category = cat;
   }
 
+  //Query search regardless of uppercase or lowercase
   if (searchQuery) {
     query.title = { $regex: searchQuery, $options: "i" };
   }
 
+  //Query author
   if (author) {
     const user = await User.findOne({ username: author }).select("_id");
 
@@ -41,6 +43,7 @@ export const getPosts = async (req, res) => {
 
   let sortObj = { createdAt: -1 };
 
+  //Sort Newest, Oldest, Popular, Trending
   if (sortQuery) {
     switch (sortQuery) {
       case "newest":
@@ -63,6 +66,7 @@ export const getPosts = async (req, res) => {
     }
   }
 
+  //Query featured
   if (featured) {
     query.isFeatured = true;
   }
@@ -134,8 +138,10 @@ export const deletePost = async (req, res) => {
     return res.status(401).json("Not authenticated!");
   }
 
+  //Get role
   const role = req.auth.sessionClaims?.metadata?.role || "user";
 
+  //If role is admin enable delete
   if (role === "admin") {
     await Post.findByIdAndDelete(req.params.id);
     return res.status(200).json("Post has been deleted");
@@ -164,8 +170,10 @@ export const featurePost = async (req, res) => {
     return res.status(401).json("Not authenticated!");
   }
 
+  //Get role
   const role = req.auth.sessionClaims?.metadata?.role || "user";
 
+  //If not admin disable featured
   if (role !== "admin") {
     return res.status(403).json("You cannot feature posts!");
   }

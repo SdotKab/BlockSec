@@ -66,15 +66,15 @@ const SinglePostPage = () => {
           <h1 className="mb-4 text-sm font-medium">Author</h1>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-8">
-              {/* {data.user.img && (
+              {data.user.img ? (
                 <Image
-                  src={data.user.img || data.noProfilePic }
+                  src={data.user.img}
                   className="w-12 h-12 rounded-full object-cover"
                   w="48"
                   h="48"
                   alt="userImg"
                 />
-              )} */}
+              ) : (
                 <Image
                   src="noProfilePic.jpeg"
                   className="w-12 h-12 rounded-full object-cover"
@@ -82,39 +82,27 @@ const SinglePostPage = () => {
                   h="48"
                   alt="noProfilePic"
                 />
-
-
-                {/* <Image
-                  src="userImg.jpeg"
-                  className="w-12 h-12 rounded-full object-cover"
-                  w="48"
-                  h="48"
-                  alt="userImg"
-                /> */}
-            {/* <Link className="text-blue-800 text-sm">Username</Link> */}
+              )}
             <Link className="text-blue-800">{data.user.username}</Link>
             </div>
             <p className="text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur
             </p>
             <div className="flex gap-2">
               <Link>
-                <Image src="facebook.svg" alt="facebook"/>
+                <Image src="x-30.svg" alt="x"/>
               </Link>
               <Link>
-                <Image src="instagram.svg" alt="instagram" />
+                <Image src="linkedin-30.svg" alt="linkedin" />
               </Link>
             </div>
           </div>
-          {/* <PostMenuActions post={data} /> */}
           <PostMenuActions post={data} />
           <SideCategories />
           <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
           <Search />
         </div>
       </div>
-      <Comments postId={data._id}/>
-      {/* <Comments /> */}
+      {/* <Comments postId={data._id}/> */}
     </div>
   )
 }
