@@ -31,7 +31,7 @@ const SinglePostPage = () => {
       {/* Cover Image */}
       <div className="flex flex-col gap-4">
         {data.img && (
-          <div className="flex justify-center items-center hidden md:block w-4/5">
+          <div className="flex flex-col justify-center items-center hidden md:block w-4/5">
             <Image src={data.img} w="600" className="rounded-2xl" alt="cover" />
           </div>
         )}
@@ -62,7 +62,7 @@ const SinglePostPage = () => {
           </p> 
         </div>
         {/* menu */}
-        <div className="px-4 h-max sticky top-8">
+        <div className="px-4 h-max sticky top-8 mb-20">
           <h1 className="mb-4 text-sm font-medium">Author</h1>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-8">

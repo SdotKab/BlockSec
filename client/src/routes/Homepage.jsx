@@ -25,10 +25,10 @@ const Homepage = () => {
         {/* titles */}
         <div className="">
           <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">
-            Learn, Discover, Secure: Unlocking Blockchain Potential. 
+            Explore, Discover, Learn and Secure: Unlocking Potential. 
           </h1>
           <p className="mt-8 text-md md:text-xl">
-            Exploring Blockchain Horizons, Discovering Secure Solutions.
+            Hacking Horizons, Delevoping Secure Solutions.
           </p>
         </div>
         {/* animated button */}
