@@ -21,6 +21,9 @@ const SideCategories = () => {
         <Link className="underline" to="/posts?cat=GRC">
           GRC
         </Link>
+        <Link className="underline" to="/posts?cat=Other">
+          Other
+        </Link>
       </div>
     </>
   )

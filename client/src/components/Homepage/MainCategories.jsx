@@ -43,6 +43,12 @@ const MainCategories = () => {
         >
           GRC
         </Link>
+        <Link
+          to="/posts?cat=Other"
+          className="hover:bg-gray-50 rounded-full px-4 py-2"
+        >
+          Other
+        </Link>
       </div>
       <span className="text-xl font-medium">|</span>
       {/* search */}

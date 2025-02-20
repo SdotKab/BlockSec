@@ -108,6 +108,7 @@ const Write = () => {
             <option value="Data" className="bg-white"> Data</option>
             <option value="IAM" className="bg-white">IAM</option>
             <option value="GRC" className="bg-white">GRC</option>
+            <option value="Other" className="bg-white">Other</option>
           </select>
 
         </div>
