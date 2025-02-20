@@ -11,12 +11,10 @@ Responsive Design: Built to be mobile-friendly and responsive across various scr
 
 API Integration: Uses Express.js to handle API requests and MongoDB for storing blog data.
 
-Full Stack Application: Uses Next.js for server-side rendering and React for the front-end.
+Full Stack Application: Uses Node.js for server-side rendering and React for the front-end.
 
 ## Tech Stack:
-React 19: Used for building interactive UIs and handling user state.
-
-Next.js: Used for server-side rendering, API routes, and static site generation.
+React 19 and Next.js: Used for building interactive UIs and handling user state.
 
 MongoDB: NoSQL database for storing blog posts and user data.
 
@@ -53,3 +51,7 @@ Node.js: JavaScript runtime used for executing the backend code.
     "micro": "^10.0.1",
     "mongoose": "^8.7.3",
     "svix": "^1.37.0"
+
+
+## Updates:
+1st Update: Will include limited user registeration, enhance roles and enable Comments.
