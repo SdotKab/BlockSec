@@ -78,7 +78,7 @@ const FeaturedPosts = () => {
               <Link to= {`/posts?cat=${posts[1].category}`} className="text-grey-800">{posts[1].category}</Link>
             </div>
             {/* title */}
-            <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[1].title}</Link>
+            <Link to={posts[1].slug} className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[1].title}</Link>
             <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
               <span>Written by</span>
               <Link className="text-blue-800" to={`/posts?author=${posts[1].user.username}`}>{posts[1].user.username}</Link>
@@ -112,7 +112,7 @@ const FeaturedPosts = () => {
               <Link to= {`/posts?cat=${posts[2].category}`} className="text-grey-800">{posts[2].category}</Link>
             </div>
             {/* title and details */}
-            <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[2].title}</Link>
+            <Link to={posts[2].slug} className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[2].title}</Link>
             <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
               <span>Written by</span>
               <Link className="text-blue-800" to={`/posts?author=${posts[2].user.username}`}>{posts[2].user.username}</Link>
@@ -146,7 +146,7 @@ const FeaturedPosts = () => {
               <Link to={`/posts?cat=${posts[3].category}`} className="text-grey-800">{posts[3].category}</Link>
             </div>
             {/* title and details */}
-            <Link to="/test" className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[3].title}</Link>
+            <Link to={posts[3].slug} className="text-base sm:text-lg md: text-2xl lg:text-xl xl:text-2xl font-medium">{posts[3].title}</Link>
             <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
               <span>Written by</span>
               <Link className="text-blue-800" to={`/posts?author=${posts[3].user.username}`}>{posts[3].user.username}</Link>

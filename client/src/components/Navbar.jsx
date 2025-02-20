@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* LOGO */}
       <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
         <Image src="icons8-blockchain-200.png" alt="Block Logo" w={40} h={40} />
-        <span>BlocDevSec</span>
+        <span>BlocDev SecOps</span>
       </Link>
     {/* MOBILE MENU */}
       <div className="md:hidden">
@@ -21,7 +21,6 @@ const Navbar = () => {
           onClick={() => setOpen((prev) => !prev)}
         >
           {/* Change Hamburger Icon */}
-          {/* {open ? "X" : "☰"} */}
           <div className="flex flex-col gap-[5.4px]">
             <div
               className={`h-[3px] rounded-md w-6 bg-black origin-left transition-all ease-in-out ${
