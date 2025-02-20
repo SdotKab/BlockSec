@@ -3,26 +3,26 @@
 Welcome to my BlockSec Blog App repository! This app is built using a modern tech stack, including React 19, Next.js, MongoDB, Clerk Auth, Express.js, and Node.js. It allows users to create, read, update, and delete blog posts with a clean and user-friendly interface, all while keeping authentication and data management secure and scalable.
 
 ## Features:
-Authentication: Secure login and signup with Clerk for handling user authentication.
+**Authentication**: Secure login and signup with Clerk for handling user authentication.
 
-Blog CRUD Operations: Users can create, read, update, and delete their blog posts.
+**Blog CRUD Operations**: Users can create, read, update, and delete their blog posts.
 
-Responsive Design: Built to be mobile-friendly and responsive across various screen sizes.
+**Responsive Design**: Built to be mobile-friendly and responsive across various screen sizes with Tailwindcss.
 
-API Integration: Uses Express.js to handle API requests and MongoDB for storing blog data.
+**API Integration**: Uses Express.js to handle API requests and MongoDB for storing blog data.
 
-Full Stack Application: Uses Node.js for server-side rendering and React for the front-end.
+**Full Stack Application**: Uses Node.js for server-side rendering and React for the front-end.
 
 ## Tech Stack:
-React 19 and Next.js: Used for building interactive UIs and handling user state.
+**React 19 and Next.js**: Used for building interactive UIs and handling user state.
 
-MongoDB: NoSQL database for storing blog posts and user data.
+**MongoDB**: NoSQL database for storing blog posts and user data.
 
-Clerk Auth: Provides secure authentication and session management for users.
+**Clerk Auth**: Provides secure authentication and session management for users.
 
-Express.js: Backend framework for building API routes and handling business logic.
+**Express.js**: Backend framework for building API routes and handling business logic.
 
-Node.js: JavaScript runtime used for executing the backend code.
+**Node.js**: JavaScript runtime used for executing the backend code.
 
 ### Frontend Package List:
     "@clerk/clerk-react": "^5.21.0",
@@ -54,4 +54,4 @@ Node.js: JavaScript runtime used for executing the backend code.
 
 
 ## Updates:
-1st Update: Will include limited user registeration, enhance roles and enable Comments.
+**1st Update**: Will include limited user registeration, enhance roles and enable Comments.
