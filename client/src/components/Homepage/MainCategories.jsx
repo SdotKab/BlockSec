@@ -38,10 +38,10 @@ const MainCategories = () => {
           IAM
         </Link>
         <Link
-          to="/posts?cat=Governance"
+          to="/posts?cat=GRC"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
-          Governance
+          GRC
         </Link>
       </div>
       <span className="text-xl font-medium">|</span>

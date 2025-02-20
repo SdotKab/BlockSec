@@ -21,7 +21,8 @@ const About = () => {
             <h1 className="mb-1 text-sm font-medium">Samakab Egal</h1>
             <p className="text-sm text-gray-500">tech enthusiastic</p>
             <p className="text-sm text-gray-500">curious tinker</p>
-            <p className="text-sm text-gray-500">father, son, cousin</p>
+            <p className="text-sm text-gray-500">student of life</p>
+            <p className="text-sm text-gray-500">father, son, brother, cousin</p>
             <div className="flex flex-row gap-1 justify-center items-center">
               <Link>
                 <Image src="x-30.svg" alt="x"/>
@@ -34,10 +35,10 @@ const About = () => {
         </div>
         <div className="flex flex-col gap-2 xl:w-2/3">
           <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta maiores, atque autem facilis doloribus eaque ducimus, aspernatur perspiciatis repellendus non voluptas ullam laboriosam animi? Magnam temporibus amet nesciunt quasi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aperiam officia veritatis optio animi voluptas obcaecati iusto. Quos soluta eligendi aut possimus earum, dolore dicta, dolorem temporibus, iste velit eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, similique distinctio? Iste similique, non excepturi nobis officia qui explicabo, ad in unde praesentium, labore accusamus quam cum pariatur consequuntur sequi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo eum aspernatur esse dicta iste architecto pariatur suscipit, debitis voluptatem reprehenderit illum quod nesciunt voluptates quae, sint asperiores accusamus, voluptas ullam.
+            I'm a tech enthusiast, passionate about emerging technologies, particularly blockchain, Web3, and AI, and their applications in cybersecurity. With a focus on innovative solutions like blockchain and tokenization, I'm especially interested in how these technologies can enhance Identity and Access Management (IAM) systems. My blog serves as a space where I aim to explore the intersection of these technologies and cybersecurity, offering insights into the ever-evolving landscape of digital security. Always keeping an eye on the future, I'm excited to share my thoughts and discoveries with others who share my curiosity for the tech world.
           </div>
           <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta maiores, atque autem facilis doloribus eaque ducimus, aspernatur perspiciatis repellendus non voluptas ullam laboriosam animi? Magnam temporibus amet nesciunt quasi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aperiam officia veritatis optio animi voluptas obcaecati iusto. Quos soluta eligendi aut possimus earum, dolore dicta, dolorem temporibus, iste velit eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, similique distinctio? Iste similique, non excepturi nobis officia qui explicabo, ad in unde praesentium, labore accusamus quam cum pariatur consequuntur sequi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo eum aspernatur esse dicta iste architecto pariatur suscipit, debitis voluptatem reprehenderit illum quod nesciunt voluptates quae, sint asperiores accusamus, voluptas ullam.
+            Outside of the tech realm, I'm a family man who enjoys traveling and immersing myself in different cultures, foods, and customs. My love for adventure extends to bikepacking, hiking, sometimes fishing and camping, where I find time to reconnect with nature. National parks are a favorite destination of mine, offering both solace and inspiration. With a thirst for knowledge that never ceases, I consider myself a lifelong learner, always seeking new experiences and growth along the way.
           </div>
         </div>
         <div className="px-4 h-max sticky top-8">

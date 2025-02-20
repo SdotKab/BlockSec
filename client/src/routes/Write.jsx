@@ -107,7 +107,7 @@ const Write = () => {
             <option value="Application" className="bg-white">Application</option>
             <option value="Data" className="bg-white"> Data</option>
             <option value="IAM" className="bg-white">IAM</option>
-            <option value="Governance" className="bg-white">Governance</option>
+            <option value="GRC" className="bg-white">GRC</option>
           </select>
 
         </div>
