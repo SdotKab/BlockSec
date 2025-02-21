@@ -85,7 +85,7 @@ const FeaturedPosts = () => {
               <span className="text-gray-500">{format(posts[1].createdAt)}</span>
             </div>
             {/* desc */}
-            <ShortDesc text={posts[1].desc} />
+            {/* <ShortDesc text={posts[1].desc} /> */}
             {/* tags */}
             <span className="flex flex-row space-around gap-1 text-grey-500 text-sm mt-2"> 
               {posts[1].tags.map((tag, index) => (
@@ -119,7 +119,7 @@ const FeaturedPosts = () => {
               <span className="text-gray-500">{format(posts[2].createdAt)}</span>
             </div>
             {/* desc */}
-            <ShortDesc text={posts[2].desc} />
+            {/* <ShortDesc text={posts[2].desc} /> */}
             {/* tags */}
             <span className="flex flex-row space-around gap-1 text-grey-500 text-sm mt-2"> 
               {posts[2].tags.map((tag, index) => (
@@ -153,7 +153,7 @@ const FeaturedPosts = () => {
               <span className="text-gray-500">{format(posts[3].createdAt)}</span>
             </div>
             {/* desc */}
-            <ShortDesc text={posts[3].desc} />
+            {/* <ShortDesc text={posts[3].desc} /> */}
             {/* tags */}
             <span className="flex flex-row space-around gap-1 text-grey-500 text-sm mt-2"> 
               {posts[3].tags.map((tag, index) => (
