@@ -90,7 +90,7 @@ export const getPost = async (req, res) => {
   //With user and profile pic
   const post = await Post.findOne({ slug: req.params.slug }).populate(
     "user",
-    "username"
+    "img username"
   );
   // const post = await Post.findOne({ slug: req.params.slug });
   res.status(200).json(post);

@@ -22,7 +22,7 @@ const About = () => {
             <p className="text-sm text-gray-500">tech enthusiastic</p>
             <p className="text-sm text-gray-500">curious tinker</p>
             <p className="text-sm text-gray-500">student of life</p>
-            <p className="text-sm text-gray-500">father, son, brother, cousin</p>
+            <p className="text-sm text-gray-500">father, husband, son, brother, cousin</p>
             <div className="flex flex-row gap-1 justify-center items-center">
               <Link>
                 <Image src="x-30.svg" alt="x"/>

@@ -23,7 +23,7 @@ const SinglePostPage = () => {
   if (error) return "Something went wrong!" + error.message;
   if (!data) return "Post not found!";
 
-
+console.log(data)
 
   return (
     <div className="flex flex-col gap-8">
@@ -66,7 +66,7 @@ const SinglePostPage = () => {
           <h1 className="mb-4 text-sm font-medium">Author</h1>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-8">
-              {data.user.img ? (
+              {data.user.img && (
                 <Image
                   src={data.user.img}
                   className="w-12 h-12 rounded-full object-cover"
@@ -74,7 +74,8 @@ const SinglePostPage = () => {
                   h="48"
                   alt="userImg"
                 />
-              ) : (
+              )} 
+              {/* : (
                 <Image
                   src="noProfilePic.jpeg"
                   className="w-12 h-12 rounded-full object-cover"
@@ -82,7 +83,7 @@ const SinglePostPage = () => {
                   h="48"
                   alt="noProfilePic"
                 />
-              )}
+              )} */}
             <Link className="text-blue-800">{data.user.username}</Link>
             </div>
             <p className="text-sm text-gray-500">
