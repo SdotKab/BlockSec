@@ -12,13 +12,13 @@ const About = () => {
       <h1 className="mb-8 text-3xl font-semibold">About</h1>
       <div className="flex flex-col xl:flex-row gap-8 mb-12">
         <div className="flex flex-col gap-4 justify-center items-center xl:w-1/3 ">
-          <Image
-            src="/userImg2.jpeg"
-            className="w-48 h-48 rounded-full object-cover" 
+          <img
+            src="/blocsecAuthor.jpeg"
+            className="w-48 h-48 rounded-full object-none" 
             w="135"
           />
           <div className="flex flex-col justify-center items-center gap-2">
-            <h1 className="mb-1 text-sm font-medium">Samakab "Sama" Egal</h1>
+            <h1 className="mb-1 text-sm font-medium">Samakab Egal</h1>
             <p className="text-sm text-gray-500">tech enthusiastic</p>
             <p className="text-sm text-gray-500">curious tinker</p>
             <p className="text-sm text-gray-500">student of life</p>
