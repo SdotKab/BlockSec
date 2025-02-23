@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
-import 'dotenv/config'
 import { clerkMiddleware, requireAuth } from "@clerk/express";
-// import dotenv from "dotenv"
+import dotenv from "dotenv"
 
 import connectDB from "./lib/connectDB.js";
 
@@ -11,7 +10,7 @@ import postRouter from "./routes/post.route.js";
 import commentRouter from "./routes/comment.route.js";
 import webhookRouter from "./routes/webhook.route.js";
 
-// dotenv.config();
+dotenv.config();
 const app = express();
 
 app.use(cors(process.env.CLIENT_URL));

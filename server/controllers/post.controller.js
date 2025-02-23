@@ -1,7 +1,10 @@
 import ImageKit from "imagekit";
+import dotenv from 'dotenv';
 
 import Post from "../models/post.model.js";
 import User from "../models/user.model.js";
+
+dotenv.config();
 
 //GetPosts
 export const getPosts = async (req, res) => {
