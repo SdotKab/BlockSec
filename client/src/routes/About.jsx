@@ -13,7 +13,7 @@ const About = () => {
       <div className="flex flex-col xl:flex-row gap-8 mb-12">
         <div className="flex flex-col gap-4 justify-center items-center xl:w-1/3 ">
           <Image
-            src="userImg.jpeg"
+            src="/userImg2.jpeg"
             className="w-48 h-48 rounded-full object-cover" 
             w="135"
           />
