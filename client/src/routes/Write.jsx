@@ -103,11 +103,16 @@ const Write = () => {
             id=""
             className="p-2 bg-white text-black font-semibold mt-1 p-3 border border-gray-600 rounded-lg appearance-none"
           >
-            <option value="Infrastructure" className="bg-white">Infrastructure</option>
+            {/* <option value="Infrastructure" className="bg-white">Infrastructure</option>
             <option value="Application" className="bg-white">Application</option>
             <option value="Data" className="bg-white"> Data</option>
             <option value="IAM" className="bg-white">IAM</option>
-            <option value="GRC" className="bg-white">GRC</option>
+            <option value="GRC" className="bg-white">GRC</option> */}
+            <option value="Blockchain" className="bg-white">Blockchain</option>
+            <option value="Development" className="bg-white">Development</option>
+            <option value="Security" className="bg-white">Security</option>
+            <option value="Operations" className="bg-white">Operations</option>
+            <option value="News" className="bg-white">News</option>
             <option value="Other" className="bg-white">Other</option>
           </select>
 

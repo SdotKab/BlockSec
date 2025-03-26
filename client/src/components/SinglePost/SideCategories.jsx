@@ -6,7 +6,7 @@ const SideCategories = () => {
     <>
       <h1 className="mt-8 mb-4 text-sm font-medium">Categories</h1>
       <div className="flex flex-col gap-2 text-sm">
-        <Link className="underline" to="/posts?cat=Infrastructure">
+        {/* <Link className="underline" to="/posts?cat=Infrastructure">
           Infrastructure
         </Link>
         <Link className="underline" to="/posts?cat=Data">
@@ -20,6 +20,21 @@ const SideCategories = () => {
         </Link>
         <Link className="underline" to="/posts?cat=GRC">
           GRC
+        </Link> */}
+        <Link className="underline" to="/posts?cat=Blockchain">
+          Blockchain
+        </Link>
+        <Link className="underline" to="/posts?cat=Development">
+          Development
+        </Link>
+        <Link className="underline" to="/posts?cat=Security">
+          Security
+        </Link>
+        <Link className="underline" to="/posts?cat=Operations">
+          Operations
+        </Link>
+        <Link className="underline" to="/posts?cat=News">
+          News
         </Link>
         <Link className="underline" to="/posts?cat=Other">
           Other
