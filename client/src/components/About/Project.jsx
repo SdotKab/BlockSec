@@ -7,29 +7,29 @@ const projects = [
   {
     id: 'project1',
     title: 'Proyecto',
-    github: 'https://www.github.com',
+    github: 'https://github.com/SdotKab/ProMgt',
     techs: 'MongoDB, ExpressJS, ReactJS, NodeJS',
     description: 'Project management and bug tracker application.',
     images: [
-      'https://via.placeholder.com/150', // Example image URL
-      'https://via.placeholder.com/150', // Add more images as needed
-      'https://via.placeholder.com/150', // Add more images as needed
-      'https://via.placeholder.com/150', // Example image URL
-      'https://via.placeholder.com/150', // Add more images as needed
-      'https://via.placeholder.com/150', // Add more images as needed
+      '/projects/Proyecto1.png', // Example image URL
+      '/projects/Proyecto2.png', 
+      '/projects/Proyecto3.png', 
+      '/projects/Proyecto4.png', 
+      '/projects/Proyecto5.png', 
+      '/projects/Proyecto6.png', 
     ],
   },
-  {
-    id: 'project2',
-    title: 'Proyecto2',
-    github: 'https://www.github.com',
-    techs: 'MongoDB, ExpressJS, ReactJS, NodeJS',
-    description: 'Project management and bug tracker application.',
-    images: [
-      'https://via.placeholder.com/150', // Example image URL
-      'https://via.placeholder.com/150', // Add more images as needed
-    ],
-  },
+  // {
+  //   id: 'project2',
+  //   title: 'Proyecto2',
+  //   github: 'https://www.github.com',
+  //   techs: 'MongoDB, ExpressJS, ReactJS, NodeJS',
+  //   description: 'Project management and bug tracker application.',
+  //   images: [
+  //     'https://via.placeholder.com/150', // Example image URL
+  //     'https://via.placeholder.com/150', // Add more images as needed
+  //   ],
+  // },
 ];
 
 const Project = () => {
@@ -76,7 +76,7 @@ const Project = () => {
             .map((project) => (
               <div key={project.id}>
                 <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
-                <p className="mb-2 text-sm">{project.github}</p>
+                <a className="mb-4 text-sm" href={project.github}>{project.github}</a>
                 <p className="mb-2 text-md">{project.techs}</p>
                 <p className="mb-2 text-md">{project.description}</p>
                 <div className="flex gap-4 mt-4">
@@ -87,13 +87,13 @@ const Project = () => {
                       key={index}
                       src={image}
                       alt={`Project image ${index + 1}`}
-                      className="w-full h-64 object-cover rounded-lg"
+                      className="w-full h-auto object-cover rounded-lg"
                     />
                   ))}
                   responsive={{
                     0: { items: 1 },
-                    768: { items: 2 },
-                    1024: { items: 3 },
+                    768: { items: 1 },
+                    1024: { items: 1 },
                   }}
                   controlsStrategy="alternate"
                 />

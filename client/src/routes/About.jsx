@@ -45,7 +45,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="px-4 h-max sticky top-8 md:hidden sm:hidden">
+        <div className="px-4 h-max top-8 md:hidden sm:hidden">
           <SideCategories />
           <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
           <Search />
