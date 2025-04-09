@@ -33,9 +33,9 @@ const SideCategories = () => {
         <Link className="underline" to="/posts?cat=Operations">
           Operations
         </Link>
-        <Link className="underline" to="/posts?cat=News">
+        {/* <Link className="underline" to="/posts?cat=News">
           News
-        </Link>
+        </Link> */}
         <Link className="underline" to="/posts?cat=Other">
           Other
         </Link>

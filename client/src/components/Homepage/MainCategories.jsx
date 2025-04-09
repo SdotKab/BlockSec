@@ -44,7 +44,7 @@ const MainCategories = () => {
           GRC
         </Link> */}
         <Link
-          to="/posts?cat=Bloc"
+          to="/posts?cat=Blockchain"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           Blockchain
@@ -56,7 +56,7 @@ const MainCategories = () => {
           Development
         </Link>
         <Link
-          to="/posts?cat=Sec"
+          to="/posts?cat=Security"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           Security
@@ -67,12 +67,12 @@ const MainCategories = () => {
         >
           Operations
         </Link>
-        <Link
+        {/* <Link
           to="/posts?cat=News"
           className="hover:bg-gray-50 rounded-full px-4 py-2"
         >
           News
-        </Link>
+        </Link> */}
         <Link
           to="/posts?cat=Other"
           className="hover:bg-gray-50 rounded-full px-4 py-2"

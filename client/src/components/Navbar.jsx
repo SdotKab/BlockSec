@@ -45,29 +45,29 @@ const Navbar = () => {
             open ? "-right-0" : "-right-[100%]"
           }`}
         >
-          <Link to="/" onClick={()=>setOpen(false)}>Home</Link>
+          {/* <Link to="/" onClick={()=>setOpen(false)}>Home</Link> */}
           <Link to="/posts?sort=trending" onClick={()=>setOpen(false)}>Trending</Link>
           <Link to="/posts?sort=popular" onClick={()=>setOpen(false)}>Most Popular</Link>
           <Link to="/about" onClick={()=>setOpen(false)}>About</Link>
-          <Link to="/login" onClick={()=>setOpen(false)}>
+          {/* <Link to="/login" onClick={()=>setOpen(false)}>
             <button className="bg-black hover:bg-transparent text-white font-semibold hover:text-white py-2 px-3 border border-gray-600 hover:border-transparent rounded-full">
               Login
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
       {/* DESKTOP MENU */}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
-        <Link to="/">Home</Link>
+        {/* <Link to="/">Home</Link> */}
         <Link to="/posts?sort=trending">Trending</Link>
         <Link to="/posts?sort=popular">Most Popular</Link>
         <Link to="/about">About</Link>
         <SignedOut>
-          <Link to="/login">
+          {/* <Link to="/login">
             <button className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-3 border border-gray-600 hover:border-transparent rounded-full">
               Login
             </button>
-          </Link>
+          </Link> */}
         </SignedOut>
         <SignedIn>
           <UserButton />
