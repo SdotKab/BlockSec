@@ -74,7 +74,7 @@ const Project = () => {
           {projects
             .filter((project) => project.id === activeTab) // Filter content based on active tab
             .map((project) => (
-              <div key={project.id}>
+              <div key={project.id}>              
                 <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
                 <a className="mb-4 text-sm" href={project.github}>{project.github}</a>
                 <p className="mb-2 text-md">{project.techs}</p>

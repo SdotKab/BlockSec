@@ -1,6 +1,6 @@
 import Image from '../components/Image';
 import Search from '../components/SinglePost/Search';
-import SideCategories from '../components/SinglePost/SideCategories';
+// import SideCategories from '../components/SinglePost/SideCategories';
 import Project from '../components/About/Project';
 import { Link } from 'react-router-dom';
 
@@ -45,11 +45,11 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="px-4 h-max top-8 md:hidden sm:hidden">
+        {/* <div className="px-4 h-max top-8">
           <SideCategories />
           <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
           <Search />
-        </div>
+        </div> */}
       </div>
       <div className="">
         <Project />
