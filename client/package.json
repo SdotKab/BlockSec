@@ -19,6 +19,7 @@
     "dotenv": "^16.4.7",
     "imagekitio-react": "^4.2.0",
     "react": "19.0.0-rc-66855b96-20241106",
+    "react-alice-carousel": "^2.9.1",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-infinite-scroll-component": "^6.1.0",
     "react-line-clamp": "^1.2.6",

@@ -1,37 +1,10 @@
-import { useState } from 'react'
-import { useUser } from '@clerk/clerk-react';
 import Image from '../components/Image';
 import Search from '../components/SinglePost/Search';
 import SideCategories from '../components/SinglePost/SideCategories';
-import { Link } from 'react-router-dom';
 import Project from '../components/About/Project';
-
-// Define the content for each project
-const projects = [
-  {
-    id: 'project1',
-    title: 'Proyecto',
-    github: 'https://www.github.com',
-    techs: 'MongoDB, ExpressJS, ReactJS, NodeJS',
-    description: 'Project management and bug tracker application.',
-  },
-  {
-    id: 'project2',
-    title: 'Proyecto2',
-    github: 'https://www.github.com',
-    techs: 'MongoDB, ExpressJS, ReactJS, NodeJS',
-    description: 'Project management and bug tracker application.',
-  },
-];
+import { Link } from 'react-router-dom';
 
 const About = () => {
-
-  const [activeTab, setActiveTab] = useState('project1'); // Track the active tab
-
-  // Handle tab click
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   return (
     <div>
@@ -79,48 +52,8 @@ const About = () => {
         </div>
       </div>
       <div className="">
-      <div className="mx-20 mb-3">
-        <span className="text-lg font-bold">Projects</span>
+        <Project />
       </div>
-      <div className="flex flex-col xl:flex-row gap-8 mb-12">
-        <div className="flex flex-col gap-4 justify-center items-center xl:w-1/4 md:flex-row md:flex-wrap md:-mb-px">
-          {/* Project Tabs */}
-          <ul className="flex-row md:flex-row space-y space-y-4 text-sm font-medium">
-            {projects.map((project) => (
-              <li key={project.id}>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleTabClick(project.id); // Switch tab
-                  }}
-                  className={`inline-flex items-center p-4 border-b-2 ${
-                    activeTab === project.id ? 'border-green-300 text-green-600' : 'border-transparent hover:text-green-600 hover:border-green-300'
-                  }`}
-                >
-                  {project.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Tab Content */}
-        <div className="flex flex-col px-16 py-10 gap-2 xl:w-3/4">
-          {projects
-            .filter((project) => project.id === activeTab) // Filter content based on active tab
-            .map((project) => (
-              <div key={project.id}>
-                <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
-                <p className="mb-2 text-sm">{project.github}</p>
-                <p className="mb-2 text-md">{project.techs}</p>
-                <p className="mb-2 text-md">{project.description}</p>
-              </div>
-            ))}
-        </div>
-      </div>
-    </div>
-
     </div>
   )
 }
