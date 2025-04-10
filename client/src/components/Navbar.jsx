@@ -63,11 +63,11 @@ const Navbar = () => {
         <Link to="/posts?sort=popular">Most Popular</Link>
         <Link to="/about">About</Link>
         <SignedOut>
-          {/* <Link to="/login">
+          <Link to="/login">
             <button className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-3 border border-gray-600 hover:border-transparent rounded-full">
               Login
             </button>
-          </Link> */}
+          </Link>
         </SignedOut>
         <SignedIn>
           <UserButton />
