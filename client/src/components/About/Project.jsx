@@ -19,17 +19,19 @@ const projects = [
       '/projects/Proyecto6.png', 
     ],
   },
-  // {
-  //   id: 'project2',
-  //   title: 'Proyecto2',
-  //   github: 'https://www.github.com',
-  //   techs: 'MongoDB, ExpressJS, ReactJS, NodeJS',
-  //   description: 'Project management and bug tracker application.',
-  //   images: [
-  //     'https://via.placeholder.com/150', // Example image URL
-  //     'https://via.placeholder.com/150', // Add more images as needed
-  //   ],
-  // },
+  {
+    id: 'project2',
+    title: 'The Roble Foundation',
+    github: 'www.theroblefoundation.org',
+    techs: 'NextJS',
+    description: 'Borehole Fundraising WebsitefoundationF',
+    images: [
+      '/projects/Foundation1.png',
+      '/projects/Foundation2.png',
+      '/projects/Foundation3.png',
+
+    ],
+  },
 ];
 
 const Project = () => {
