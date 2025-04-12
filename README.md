@@ -1,6 +1,6 @@
 # BlockSec
 
-Welcome to my BlockSec Blog App repository! This app is built using a modern tech stack, including React 19, Next.js, MongoDB, Clerk Auth, Express.js, and Node.js. It allows users to create, read, update, and delete blog posts with a clean and user-friendly interface, all while keeping authentication and data management secure and scalable.
+Welcome to my BlockSec Blog App repository! This app is built using a modern tech stack, including React 19, MongoDB, Clerk Auth, Express.js, and Node.js. It allows users to create, read, update, and delete blog posts with a clean and user-friendly interface, all while keeping authentication and data management secure and scalable.
 
 ## Features:
 **Authentication**: Secure login and signup with Clerk for handling user authentication.
