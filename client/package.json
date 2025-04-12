@@ -14,20 +14,17 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@tanstack/react-query": "^5.59.20",
-    "axios": "^1.7.9",
-    "dompurify": "^3.2.3",
+    "axios": "^1.8.2",
+    "dompurify": "^3.2.4",
     "dotenv": "^16.4.7",
     "imagekitio-react": "^4.2.0",
-    "react": "19.0.0-rc-66855b96-20241106",
+    "react": "^19.1.0",
     "react-alice-carousel": "^2.9.1",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "^19.1.0",
     "react-infinite-scroll-component": "^6.1.0",
-    "react-line-clamp": "^1.2.6",
-    "react-quill": "^2.0.0",
     "react-quill-new": "^3.3.3",
     "react-router-dom": "^7.1.1",
     "react-toastify": "^10.0.6",
-    "react-truncate-markup": "^5.1.2",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {
@@ -43,6 +40,6 @@
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10"
+    "vite": "^6.2.5"
   }
 }

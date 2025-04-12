@@ -46,10 +46,10 @@ const router = createBrowserRouter([
         path: "/write",
         element: <Write />,
       },
-      // {
-      //   path: "/login",
-      //   element: <LoginPage />,
-      // },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
       // {
       //   path: "/register",
       //   element: <RegisterPage />,
